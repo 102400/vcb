@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="book" extends="myDefault" namespace="/book">
+		<action name="*" class="struts.book.BookAction" method="execute">
+			<result name="success" type="dispatcher">
+				/WEB-INF/book.jsp
+			</result>
+			<!-- 
+			<result name="error" type="dispatcher">
+						/WEB-INF/errors/404.jsp
+			</result>
+			 -->
+		</action>
+	</package>
+</struts>

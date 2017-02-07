@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.mapper.alwaysSelectFullNamespace" value="true"></constant><!-- namespace 命名空间严格匹配 -->
+	
+	<package name="myDefault" extends="struts-default" abstract="true">
+		<interceptors>
+			<interceptor name="auth" class="interceptor.AuthInterceptor"></interceptor>
+			<interceptor-stack name="myDefaultStack">
+				<interceptor-ref name="auth"/>
+            	<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myDefaultStack"></default-interceptor-ref>
+		<global-results>
+			<result name="404">/WEB-INF/errors/404.jsp</result>
+			<result name="verifyFail">/logout</result>
+			<result name="needToLogin">/WEB-INF/login.jsp</result>
+		</global-results>
+	</package>
+	
+	<package name="myJsonDefault" extends="json-default" abstract="true">
+		<interceptors>
+			<interceptor name="auth" class="interceptor.AuthInterceptor"></interceptor>
+			<interceptor name="json" class="org.apache.struts2.json.JSONInterceptor"></interceptor>
+			<interceptor-stack name="myDefaultStack">
+            	<interceptor-ref name="auth"/>
+            	<interceptor-ref name="json"/>
+            	<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myDefaultStack"></default-interceptor-ref>
+		<global-results>
+			<result name="404">/WEB-INF/errors/404.jsp</result>
+			<result name="verifyFail">/logout</result>
+			<result name="needToLogin">/WEB-INF/login.jsp</result>
+		</global-results>
+	</package>
+	
+	<include file="struts/index/index-struts.xml"></include>
+	<include file="struts/search/search-struts.xml"></include>
+	<include file="struts/book/book-struts.xml"></include>
+	<include file="struts/celebrity/celebrity-struts.xml"></include>
+	
+	<include file="struts/people/people-struts.xml"></include>
+	
+	<include file="struts/stacks/stacks-struts.xml"></include>
+	<include file="struts/borrow/borrow-struts.xml"></include>
+	<include file="struts/settings/settings-struts.xml"></include>
+	<include file="struts/message/message-struts.xml"></include>
+	<include file="struts/cart/cart-struts.xml"></include>
+	<include file="struts/order/order-struts.xml"></include>
+	<include file="struts/d0/do-struts.xml"></include>
+	<include file="struts/wish/wish-struts.xml"></include>
+	<include file="struts/collect/collect-struts.xml"></include>
+	
+	<include file="struts/login/login-struts.xml"></include>
+	<include file="struts/register/register-struts.xml"></include>
+	
+	
+	
+	<include file="struts/logout/logout-struts.xml"></include>
+	
+	<include file="struts/captcha/captcha-struts.xml"></include>
+	
+	<include file="struts/ajax/book/own/own-struts.xml"></include>
+	<include file="struts/ajax/stacks/my/status/status-struts.xml"></include>
+	<include file="struts/ajax/stacks/people/cart/cart-struts.xml"></include>
+	<include file="struts/ajax/order/process/process-struts.xml"></include>
+	<include file="struts/ajax/register/register-struts.xml"></include>
+	
+	<!-- 
+	<package name="struts" extends="struts-default" namespace="/">
+			<global-results>
+					<result name="error" type="dispatcher">
+						/WEB-INF/errors/404.jsp
+					</result>
+			</global-results>
+	</package>
+	-->
+	<!-- 
+	<include file="test/test-struts.xml"></include>
+	-->
+	<!-- 对于任意请求直接呈现WEB-INF/content目录下同名的JSP页面 -->
+	<!-- 
+	<package name="default" extends="struts-default" namespace="/">
+		<action name="*">
+			<result>/WEB-INF/content/{1}.jsp</result>
+		</action>
+	</package>
+	-->
+</struts>

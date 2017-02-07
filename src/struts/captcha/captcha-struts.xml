@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="captcha" extends="struts-default" namespace="/images">
+		<action name="captcha" class="struts.captcha.CaptchaAction" method="execute">
+			<result name="success" type="stream">
+				<param name="contentType">image/png</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+	</package>
+</struts>

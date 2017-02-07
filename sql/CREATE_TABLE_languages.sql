@@ -1,0 +1,7 @@
+CREATE TABLE languages
+(
+	languageId INT NOT NULL AUTO_INCREMENT,
+	languageName VARCHAR(255) NOT NULL,
+	createTime DATETIME NOT NULL DEFAULT NOW(),
+	PRIMARY KEY(languageId)
+);

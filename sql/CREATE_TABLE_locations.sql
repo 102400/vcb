@@ -1,0 +1,10 @@
+CREATE TABLE locations
+(
+	locationId INT NOT NULL AUTO_INCREMENT,
+	name VARCHAR(255) NOT NULL,
+	userId INT NOT NULL,  -- users.userId
+	n DOUBLE NOT NULL,
+	e DOUBLE NOT NULL,
+	createTime DATETIME NOT NULL DEFAULT NOW(),
+	PRIMARY KEY(locationId)
+);

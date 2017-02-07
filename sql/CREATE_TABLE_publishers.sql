@@ -1,0 +1,7 @@
+CREATE TABLE publishers
+(
+	publisherId INT NOT NULL AUTO_INCREMENT,
+	name VARCHAR(255) NOT NULL,
+	createTime DATETIME NOT NULL DEFAULT NOW(),
+	PRIMARY KEY(publisherId)
+);

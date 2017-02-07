@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="order" extends="myDefault" namespace="/">
+		<action name="order" class="struts.order.OrderAction" method="execute">
+			<result name="success" type="dispatcher">
+				/WEB-INF/order.jsp
+			</result>
+		</action>
+	</package>
+	<package name="orderBorrow" extends="myDefault" namespace="/order">
+		<action name="borrow" class="struts.order.borrow.BorrowAction" method="execute">
+			<result name="success" type="dispatcher">
+				/WEB-INF/orderborrow.jsp
+			</result>
+		</action>
+	</package>
+	<package name="orderLend" extends="myDefault" namespace="/order">
+		<action name="lend" class="struts.order.lend.LendAction" method="execute">
+			<result name="success" type="dispatcher">
+				/WEB-INF/orderlend.jsp
+			</result>
+		</action>
+	</package>
+	<package name="createOrder" extends="myDefault" namespace="/order">
+		<action name="create" class="struts.order.process.CreateOrderAction" method="execute">
+			<result name="success" type="redirect">
+				/order/borrow
+			</result>
+			<result name="fail" type="redirect">
+				/cart
+			</result>
+		</action>
+	</package>
+</struts>

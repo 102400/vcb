@@ -1,0 +1,9 @@
+待实现
+	创建订单后从借阅箱删除订单内的物品
+
+bug
+	任何登录用户访问 http://localhost:8080/people/1/stacks 页面,只要物品能借则状态永远是已加入借阅箱(实际你的借阅箱并没有此书),其他用户页面不会出现此问题
+		peoplestacks.jsp <c:when test="${fn:contains(peoplestacksshow.cartItemId,mystacksshow.itemList[i].itemId)}"> 地址为http://localhost:8080/people/1/stacks时判断不正确
+			peoplestacksshow.cartItemId,mystacksshow.itemList[i].itemId均正常
+			mystacksshow.itemList[i].itemId并不包含在peoplestacksshow.cartItemId里,但判断仍为真
+				fn:contains 可能有bug?

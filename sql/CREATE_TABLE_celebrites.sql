@@ -1,0 +1,10 @@
+CREATE TABLE celebrites
+(
+	celebrityId INT NOT NULL AUTO_INCREMENT,
+	nameZh VARCHAR(255) NOT NULL,
+	nameEn VARCHAR(255),
+	sex INT NOT NULL DEFAULT 0, -- 0未知 1男 2女 3X
+	birthday DATE,
+	createTime DATETIME NOT NULL DEFAULT NOW(),
+	PRIMARY KEY(celebrityId)
+);

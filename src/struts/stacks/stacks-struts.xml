@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="mystacks" extends="myDefault" namespace="/">
+		<action name="stacks" class="struts.stacks.MyStacksAction" method="execute">
+			<result name="success" type="dispatcher">
+				/WEB-INF/mystacks.jsp
+			</result>
+		</action>
+	</package>
+	
+	<package name="peoplestacks" extends="myDefault" namespace="/people/*">
+		<action name="stacks" class="struts.stacks.PeopleStacksAction" method="execute">
+			<result name="success" type="dispatcher">
+				/WEB-INF/peoplestacks.jsp
+			</result>
+			<result name="myStacks" type="redirect">
+				/stacks
+			</result>
+		</action>
+	</package>
+</struts>

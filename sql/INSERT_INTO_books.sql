@@ -1,0 +1,338 @@
+INSERT INTO books
+(
+	bookId,
+	bookInfoId,
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	1,
+	2,
+	'瓦尔登湖',
+	2,
+	2,
+	292,
+	'9787532739578',
+	11.00,
+	2006,
+	8
+);
+INSERT INTO books
+(
+	bookInfoId,
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	2,
+	'瓦尔登湖',
+	2,
+	2,
+	367,
+	'9787532747979',
+	25.00,
+	2009,
+	6
+);
+INSERT INTO books
+(
+	bookInfoId,
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	2,
+	'瓦尔登湖',
+	3,
+	2,
+	339,
+	'9787530209073',
+	28.00,
+	2009,
+	1
+);
+INSERT INTO books
+(
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	'美丽新世界',
+	4,
+	2,
+	255,
+	'9787536671805',
+	20.00,
+	2005,
+	6
+);
+INSERT INTO books
+(
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	'动物农场',
+	2,
+	2,
+	119,
+	'9787532741854',
+	10.00,
+	2007,
+	3
+);
+INSERT INTO books
+(
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	'一九八四',
+	5,
+	2,
+	269,
+	'9787020088515',
+	24.00,
+	2012,
+	1
+);
+INSERT INTO books
+(
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	'永恒的终结',
+	6,
+	2,
+	264,
+	'9787539957173',
+	32.00,
+	2014,
+	9
+);
+INSERT INTO books
+(
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	'神们自己',
+	6,
+	2,
+	328,
+	'9787539978529',
+	39.00,
+	2014,
+	12
+);
+INSERT INTO books
+(
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	'培根随笔全集',
+	2,
+	2,
+	246,
+	'9787532757060',
+	20.00,
+	2012,
+	4
+);
+INSERT INTO books
+(
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	'看见',
+	7,
+	2,
+	424,
+	'9787549529322',
+	39.80,
+	2013,
+	1
+);
+INSERT INTO books
+(
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	'沉默的大多数',
+	8,
+	2,
+	555,
+	'9787500627098',
+	27.00,
+	1997,
+	10
+);
+INSERT INTO books
+(
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	'心理学与生活',
+	9,
+	2,
+	621,
+	'9787115111302',
+	88.00,
+	2003,
+	10
+);
+INSERT INTO books
+(
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	'荒野生存',
+	10,
+	2,
+	196,
+	'9787300095103',
+	39.80,
+	2008,
+	7
+);
+INSERT INTO books
+(
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	'丑陋的中国人',
+	5,
+	2,
+	250,
+	'9787020065639',
+	28.00,
+	2008,
+	4
+);
+INSERT INTO books
+(
+	name,
+	publisherId,
+	languageId,
+	pages,
+	isbn,
+	price,
+	publicationYear,
+	publicationMonth
+)
+VALUES
+(
+	'蝇王',
+	2,
+	2,
+	236,
+	'9787532740109',
+	13.00,
+	2006,
+	8
+);
